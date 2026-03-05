@@ -61,11 +61,11 @@ Cartridge* UI::selectGame()
         
         if (isDownPressed(CONTROLLER::A) && (selected >= 0 && selected < size))
         {
-            Cartridge* cart;
-            const char* game = ("/" + files[selected]).c_str();
+            std::string game = "/" + files[selected];
+            const char* path = game.c_str();
+
             std::vector<std::string>().swap(files);
-            cart = new Cartridge(game);
-            return cart;
+            return new Cartridge(path);
         }
     }
 }
