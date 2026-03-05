@@ -566,7 +566,7 @@ void UI::loadEmulatorSettings(Bus* nes)
 void UI::setBrightness(int value)
 {
     uint8_t pwm = ((value * 255) + 50) / 100;
-    ledcWrite(BL_CHANNEL, pwm);
+    ledcWrite(TFT_BACKLIGHT_PIN, pwm);
 }
 
 void UI::saveSettings(const Settings* s)

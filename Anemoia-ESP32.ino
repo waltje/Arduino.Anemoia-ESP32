@@ -41,9 +41,8 @@ void setup()
 
     #ifdef TFT_BACKLIGHT_ENABLE
         pinMode(TFT_BACKLIGHT_PIN, OUTPUT);
-        ledcSetup(BL_CHANNEL, BL_FREQ, BL_RESOLUTION);
-        ledcAttachPin(TFT_BACKLIGHT_PIN, BL_CHANNEL);
-        ledcWrite(BL_CHANNEL, 255);
+        ledcAttach(TFT_BACKLIGHT_PIN, BL_FREQ, BL_RESOLUTION);
+        ledcWrite(TFT_BACKLIGHT_PIN, 255);
     #endif
 
     setupI2SDAC();
