@@ -547,7 +547,7 @@ void UI::initializeSettings()
 {
     if (!SD.exists("/settings.bin"))
     {
-        Settings temp;
+        Settings temp = {100, 100, 0};
         saveSettings(&temp);
     }
     loadSettings(&settings);
@@ -586,7 +586,7 @@ void UI::loadSettings(Settings* s)
     if (f.size() != sizeof(Settings)) 
     {
         f.close();
-        Settings temp;
+        Settings temp = {100, 100, 0};
         saveSettings(&temp);
         *s = temp;
     }
