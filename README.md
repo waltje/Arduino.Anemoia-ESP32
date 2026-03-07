@@ -107,8 +107,8 @@ Anemoia-ESP32 requires a dual-core ESP32 with a minimum of 1 MB flash memory and
 | Signal   | ESP32 Pins     |
 |----------|----------------|
 | MOSI     | GPIO13         |
-| MISO     | GPIO34         |
-| SCLK     | GPIO26         |
+| MISO     | GPIO12         |
+| SCLK     | GPIO14         |
 | CS       | GND            |
 
 ## Audio Amplifier
@@ -122,14 +122,14 @@ There are currently three input methods: Tactile push buttons, an NES/SNES contr
 ### Tactile Push Buttons
 | Signal   | ESP32 Pins     |
 |----------|----------------|
-| A        | GPIO22 & GND   |
-| B        | GPIO21 & GND   |
-| Left     | GPIO0 & GND    |
-| Right    | GPIO12 & GND   |
+| A        | GPIO19 & GND   |
+| B        | GPIO26 & GND   |
+| Left     | GPIO32 & GND    |
+| Right    | GPIO33 & GND   |
 | Up       | GPIO15 & GND   |
 | Down     | GPIO5 & GND    |
-| Start    | GPIO32 & GND   |
-| Select   | GPIO27 & GND   |
+| Start    | GPIO27 & GND   |
+| Select   | GPIO18 & GND   |
 <br>
 
 ### NES/SNES controller
@@ -138,9 +138,9 @@ There are currently three input methods: Tactile push buttons, an NES/SNES contr
 
 | Signal   | ESP32 Pins     |
 |----------|----------------|
-| Clock    | GPIO5          |
-| Latch    | GPIO19         |
-| Data     | GPIO21         |
+| Clock    | GPIO22         |
+| Latch    | GPIO27         |
+| Data     | GPIO35         |
 <br>
 
 ### PS1/PS2 controller
@@ -149,10 +149,10 @@ There are currently three input methods: Tactile push buttons, an NES/SNES contr
 
 | Signal    | ESP32 Pins     |
 |-----------|----------------|
-| Data      | GPIO5          |
-| Command   | GPIO19         |
-| Attention | GPIO21         |
-| Clock     | GPIO22         |
+| Data      | GPIO35         |
+| Command   | GPIO22         |
+| Attention | GPIO19         |
+| Clock     | GPIO23         |
 <br>
 
 
