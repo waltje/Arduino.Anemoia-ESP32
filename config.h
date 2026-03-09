@@ -6,9 +6,6 @@
 // 2 = CONTROLLER_SNES, 3 = CONTROLLER_PSX
 #define CONTROLLER_TYPE 0
 
-// MicroSD card configuration
-#define SD_FREQ 80000000
-
 // Screen Configuration
 // #define TFT_BACKLIGHT_ENABLE // Uncomment this line if using a screen with backlight pin
 #define TFT_BACKLIGHT_PIN 21
@@ -17,6 +14,7 @@
 // #define TFT_PARALLEL // Uncomment this line if using parallel communication instead of SPI communication
 
 // MicroSD card module Pins
+#define SD_FREQ 80000000 // SD card SPI frequency (try lower if you have issues with SD card initialization, e.g. 4000000)
 #define SD_MOSI_PIN 13
 #define SD_MISO_PIN 12
 #define SD_SCLK_PIN 14
