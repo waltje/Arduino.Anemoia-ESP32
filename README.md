@@ -163,10 +163,11 @@ Most controllers should work fine from 3.3V power supply.
 
 ## Getting Started
 
-1. Upload the `Anemoia-ESP32.ino` program into the ESP32
-2. Put .nes game roms inside the root of a microSD card
-3. Insert the microSD card into the microSD card module
-4. Power on the ESP32 and select a game from the file select menu
+1. Build and upload the `Anemoia-ESP32.ino` program into the ESP32.
+2. Format your microSD card to `FAT32`.
+2. Put .nes game roms inside the root of a microSD card.
+3. Insert the microSD card into the microSD card module.
+4. Power on the ESP32 and select a game from the file select menu.
 
 ## How to build and upload
 
