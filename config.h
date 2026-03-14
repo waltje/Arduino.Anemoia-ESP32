@@ -11,7 +11,7 @@
 #define TFT_BACKLIGHT_PIN 21
 #define SCREEN_ROTATION 1 // Screen orientation: 1 or 3 (1 = landscape, 3 = landscape flipped)
 #define SCREEN_SWAP_BYTES // Uncomment if colors appear wrong
-// #define TFT_PARALLEL // Uncomment this line if using parallel communication instead of SPI communication
+// #define DISABLE_DMA // Uncomment this line if using parallel communication instead of SPI communication
 
 // MicroSD card module Pins
 #define SD_FREQ 80000000 // SD card SPI frequency (try lower if you have issues with SD card initialization, e.g. 4000000)
