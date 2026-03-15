@@ -110,7 +110,6 @@ IRAM_ATTR void emulate()
     &polling_task_handle,
     0
     );
-    screen.setAddrWindow(32, 0, 256, 240);
 
     #ifdef DEBUG
         last_frame_time = esp_timer_get_time();
@@ -132,7 +131,6 @@ IRAM_ATTR void emulate()
                 vTaskResume(apu_task_handle);
                 next_frame = esp_timer_get_time() + FRAME_TIME;
                 nes.controller = 0;
-                screen.setAddrWindow(32, 0, 256, 240);
             }
         }
 
