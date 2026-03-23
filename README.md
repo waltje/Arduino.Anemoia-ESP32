@@ -151,6 +151,11 @@ These are the recommended parts to use for this project.<br>
 | SCLK     | GPIO14         |
 | CS       | GND            |
 
+> [!IMPORTANT]
+> <img width="169" alt="3V3-microsd-module-img" src="https://github.com/user-attachments/assets/be990b45-e1c7-4b2b-b575-c105c55849c9" />
+>
+> If using this **3.3V microSD card module**, the pull-up resistor on **MISO (GPIO12)** must be **removed**. GPIO12 is a bootstrapping pin (MTDI) that must be LOW during boot. The external pull-up on the microSD module conflicts with the boot strapping process, preventing the ESP32 from booting correctly.
+
 ### Audio Amplifier
 | Signal   | ESP32 Pins     |
 |----------|----------------|
