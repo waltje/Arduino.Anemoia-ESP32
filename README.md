@@ -131,6 +131,8 @@ These are the recommended parts to use for this project.<br>
 - [40mm Speaker](https://s.click.aliexpress.com/e/_c4Ci9359)
 
 ## Default Pin Setup
+![Default pin schematic](https://github.com/user-attachments/assets/ded0f955-20be-4b0b-87f4-d7528cb23e67)
+
 ### TFT Display
 | Signal   | ESP32 Pins     |
 |----------|----------------|
