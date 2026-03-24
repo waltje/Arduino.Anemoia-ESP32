@@ -36,7 +36,7 @@ inline HWConfig loadConfig()
             LOG("LittleFS.format() failed");
             return cfg;
         }
-        if (!LittleFS.begin(false, "/littlefs", 10, "spiffs")) {
+        if (!LittleFS.begin()) {
             LOG("LittleFS mount failed after format, using defines in config.h"); 
             return cfg;
         }
