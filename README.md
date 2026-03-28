@@ -194,7 +194,7 @@ There are currently three input methods: Tactile push buttons, an NES/SNES contr
 
 | Signal    | ESP32 Pins     |
 |-----------|----------------|
-| Data      | GPIO35         |
+| Data      | GPIO17 (TX2)   |
 | Command   | GPIO22         |
 | Attention | GPIO19         |
 | Clock     | GPIO23         |
