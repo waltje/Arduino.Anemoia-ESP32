@@ -24,6 +24,27 @@
 #define CONTROLLER_NES_LATCH 27
 #define CONTROLLER_NES_DATA 35
 
+// Unused button pins (set to -1 for CYD)
+#define A_BUTTON -1
+#define B_BUTTON -1
+#define LEFT_BUTTON -1
+#define RIGHT_BUTTON -1
+#define UP_BUTTON -1
+#define DOWN_BUTTON -1
+#define START_BUTTON -1
+#define SELECT_BUTTON -1
+
+// Unused SNES controller pins (set to -1 for CYD)
+#define CONTROLLER_SNES_CLK -1
+#define CONTROLLER_SNES_LATCH -1
+#define CONTROLLER_SNES_DATA -1
+
+// Unused PS1/PS2 controller pins (set to -1 for CYD)
+#define CONTROLLER_PSX_DATA -1
+#define CONTROLLER_PSX_COMMAND -1
+#define CONTROLLER_PSX_ATTENTION -1
+#define CONTROLLER_PSX_CLK -1
+
 #define DAC_PIN 1 // 0 = GPIO25, 1 = GPIO26 (CYD uses GPIO26)
 
 #define FRAMESKIP
