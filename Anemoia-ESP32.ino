@@ -23,7 +23,7 @@
 
 HWConfig hw_config;
 TFT_eSPI screen = TFT_eSPI();
-SPIClass SD_SPI(HSPI);
+SPIClass SD_SPI(SD_SPI_PORT);
 UI ui(&screen);
 Cartridge* cart;
 void setup() 
