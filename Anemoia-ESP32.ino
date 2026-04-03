@@ -31,6 +31,7 @@ void setup()
     // Turn off Wifi and Bluetooth to reduce CPU overhead
     #ifdef DEBUG
         Serial.begin(115200);
+        log_pin_config();
     #endif
     
     WiFi.mode(WIFI_OFF);
