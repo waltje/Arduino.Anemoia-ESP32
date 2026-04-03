@@ -145,19 +145,15 @@ jobs:
           [ "${{ matrix.device }}" = "cyd"        ] && DEFINES="$DEFINES -DCHEAP_YELLOW_DISPLAY_CONF"
           echo "Extra defines: $DEFINES"
           echo ""
-          echo "========== PREPROCESSOR OUTPUT =========="
-          GCC=$(find ~/.arduino15/packages/esp32/tools/xtensa-esp32-elf-gcc -name "xtensa-esp32-elf-gcc" -type f | head -1)
-          echo "Using GCC: $GCC"
-          $GCC \
-            -E -dM \
-            -I. \
-            -I~/Arduino/libraries/TFT_eSPI \
-            -I~/.arduino15/packages/esp32/hardware/esp32/3.2.1/cores/esp32 \
-            -I~/.arduino15/packages/esp32/hardware/esp32/3.2.1/variants/esp32 \
-            $DEFINES \
-            config.h \
-            | grep -E "SD_FREQ|SD_MOSI|SD_MISO|SD_SCLK|SD_CS|SD_SPI_PORT|CONTROLLER_TYPE|CONTROLLER_NES|CONTROLLER_SNES|CONTROLLER_PSX|DAC_PIN|SCREEN_ROTATION|SCREEN_SWAP|TFT_BACKLIGHT|TFT_BACKLIGHT_PIN|ST7789|ILI9341|SPI_FREQUENCY|CHEAP_YELLOW|DEBUG|FRAMESKIP|A_BUTTON|B_BUTTON|LEFT_BUTTON|RIGHT_BUTTON|UP_BUTTON|DOWN_BUTTON|START_BUTTON|SELECT_BUTTON|DISABLE_DMA" \
-            | sort
+          echo "========== USER_SETUP.H =========="
+          cat ~/Arduino/libraries/TFT_eSPI/User_Setup.h
+          echo ""
+          echo "========== CONFIG.H =========="
+          if [ "${{ matrix.device }}" = "cyd" ]; then
+            cat config_cyd.h
+          else
+            cat config.h
+          fi
           echo "=========================================="
 
       - name: Compile firmware
